@@ -1,0 +1,47 @@
+@import "../../styles/mixins";
+
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+
+    @include small {
+      margin-left: 10vw;
+    }
+  }
+
+  .preview {
+    display: flex;
+    justify-content: space-between;
+
+    .collection-item {
+      margin-left: 10px;
+    }
+
+    @include medium {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      .collection-item {
+        width: 100%;
+      }
+    }
+
+    @include small {
+      display: flex;
+      flex-direction: column;
+
+      .collection-item {
+        width: 80vw;
+        align-self: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

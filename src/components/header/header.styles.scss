@@ -1,0 +1,67 @@
+@import "../../styles/mixins";
+
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  overflow-y: hidden;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .checkoutLink {
+      display: none;
+    }
+  }
+  @include small {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    .burger {
+      display: block;
+    }
+
+    .logo-container {
+      align-self: flex-start;
+    }
+
+    .options {
+      display: none;
+
+      .option {
+        padding: 5px 15px;
+      }
+
+      .checkoutLink {
+        display: block;
+      }
+    }
+  }
+}
+
+.expand {
+  height: fit-content;
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: -10px;
+  }
+}
